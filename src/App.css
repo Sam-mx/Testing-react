@@ -1,0 +1,201 @@
+:root{
+    --white-- : #fff;
+    --black-- : #000000;
+
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+
+  .Testing {
+    width: 100%;
+    height: 100vh;
+    background: azure;
+}
+
+.heading {
+    text-align: center;
+    font-size: 100px;
+    padding: 10px;
+    margin-top: 1rem;
+    text-shadow: 4px 4px 2px rgba(29,214,230,0.6);
+}
+
+
+.BMI {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.BMI .bmiform {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 40px;
+}
+
+.BMI h1 {
+    color: var(--white--);
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 4px 4px 2px rgba(29,214,230,0.6);
+}
+
+.BMI h2 {
+    color: var(--white--);
+    margin-top: 20px;
+}
+
+.BMI span {
+    margin: 12px 0;
+    color:var(--white--);
+    display: block;
+    text-align: center;
+}
+
+.BMI .area-input {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BMI .area-input input {
+    background-color: #DCDCDC;
+    color: #202020;
+    font-size: 16px;
+    height: 46px;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    transition: all ease 0.2s;
+}
+
+.BMI .area-input input::placeholder {
+    color: #202020;
+}
+
+.BMI .area-input input:hover {
+    background-color: rgb(220, 220, 220, 0.8);
+}
+
+.BMI .area-input button {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    color: white;
+    height: 46px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+.BMI .area-input button:hover {
+   opacity: .8;
+}
+
+/* When the screen size is less than 500px */
+@media (max-width: 500px) {
+    .BMI .area-input {
+    width: 300px;
+  }
+}
+
+.watch {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.watch .stopwatch {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 40px;
+}
+
+.watch .timer {
+    color: var(--white--);
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 2px rgba(29,214,230,0.6);
+}
+
+.watch .restart{
+    font-size: 25px;
+    font-weight: 700;
+    color: #ff7576;
+    background-color: #2B3044;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    width: 40%;
+    position: relative;
+    line-height: 24px;
+    border-radius: 9px;
+    box-shadow: 0px 1px 2px #2B3044,
+      0px 4px 16px #2B3044;
+    transform-style: preserve-3d;
+    transform: scale(var(--s, 1)) perspective(600px)
+      rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    perspective: 600px;
+    transition: transform 0.1s;
+  }
+
+  .watch .stop{
+    font-size: 25px;
+    font-weight: 700;
+    color: #ff7576;
+    background-color: #2B3044;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    width: 40%;
+    position: relative;
+    line-height: 24px;
+    border-radius: 9px;
+    box-shadow: 0px 1px 2px #2B3044,
+      0px 4px 16px #2B3044;
+    transform-style: preserve-3d;
+    transform: scale(var(--s, 1)) perspective(600px)
+      rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    perspective: 600px;
+    transition: transform 0.1s;
+    float:right;
+  }
+  
+  .watch .sp {
+    background: linear-gradient(
+        90deg,
+        #866ee7,
+        #ea60da,
+        #ed8f57,
+        #fbd41d,
+        #2cca91
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+  }
+  
+  .watch .restart:active,
+  .watch .stop:active {
+    transition: 0.3s;
+    transform: scale(0.93);
+  }
